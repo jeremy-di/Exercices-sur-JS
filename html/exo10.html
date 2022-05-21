@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Parcours - Exo 10</title>
+	<link href="https://fonts.googleapis.com/css?family=Cabin:400,500,500i" rel="stylesheet" />
+	<link rel="stylesheet" href="../css/base.min.css" />
+	<link rel="stylesheet" href="../css/map.css" />
+</head>
+
+<body>
+	<header id="header">
+		<h1 id="title">Le parcours JavaScript
+			<i>💪</i>
+			<span></span>
+		</h1>
+	</header>
+	<nav id="nav"></nav>
+	<main id="main">
+		<div id="epreuve" class="bonus">
+			<div class="summary">
+                <div class="category">Algo... très difficile</div>
+				<h2>Invader</h2>
+				<p>Dessine moi un alien...</p>
+                <ol>
+                    <li>définir une fonction <code>renderModel()</code> qui permet d'afficher chaque caractère d'un tableau (contenu dans <code>./js/map.js</code>) dans la console. Pour sélectionner le tableau <code>squid</code> par exemple on pour écrire <code>map.models["squid"]</code>.</li>
+                    <li>définir une fonction <code>renderPixel(str)</code> qui permet de créer un élément <code>span</code> dans le DOM et d'y inscrire la string <code>str</code> donnée en paramètre. Cette fonction placera aussi le nouvel élément dans <code>#invader</code></li>
+                    <li>utiliser la fonction <code>renderPixel()</code> dans la fonction <code>renderModel()</code> pour afficher un élément dans le DOM plutôt qu'un caractère dans la console</li>
+                    <li>regrouper ces éléments dans des blocs : un bloc représentera une ligne du tableau issu de <code>./js/map.js</code></li>
+                    <li>associer chaque classe présente dans le fichier <code>./css/invader.css</code> à chaque type de caractère présent dans les tableaux de <code>./js/map.js</code> et ajouter ces classes dans les éléments créés grâce à la fonction <code>renderPixel()</code></li>
+                    <li>on va maintenant s'occuper de la navigation entre mes modèles : créer une fonction <code>generateMenu()</code> qui va créer un bouton pour chaque modèle présent dans <code>./js/map.js</code>. Chaque bouton portera comme nom, le nom du modèle qu'il va afficher et un attribut <code>data-model-name</code> qui reprend ce nom.Tous les boutons seront placés dans <code>#select-model</code>. Chaque bouton contiendra aussi un écouteur d'évènement qui lancera l'affichage du modèle qu'il désigne (prévoir une autre fonction <code>handleClickButton(event)</code>...)</li>
+                </ol>
+                </div>
+		</div>
+		<section id="test">
+            <nav class="select-model"></nav>
+            <div id="invader"></div>
+        </section>
+	</main>
+
+	<footer id="footer">
+		<p></p>
+		<p>Numerilis - CRP Beauvoir</p>
+	</footer>
+
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/app.js"></script>
+	<script src="../js/exo10.js"></script>
+    <script src="../js/map.js"></script>
+</body>
+
+</html>
